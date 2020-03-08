@@ -44,6 +44,6 @@ public class Exercise3Test {
 
     @Test
     public void test3rdMethod() {
-        assertEquals("There should be 7 numbers which have the sum of digits an even number in the first 15 prime numbers", 7, Exercise3.numberOfPNWithEvenSumOfDigits(primeNumbers));
+        assertEquals("There should be 7 numbers which have the sum of digits an even number in the first 15 prime numbers", 7, Exercise3.numberOfPNWithEvenSumOfDigits(myPN));
     }
 }

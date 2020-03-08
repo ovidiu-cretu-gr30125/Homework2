@@ -1,5 +1,7 @@
 package isp.lab2;
 
+import java.util.Scanner;
+
 public class Exercise2 {
 
     /**
@@ -9,7 +11,10 @@ public class Exercise2 {
      * @return the number of points entered by user
      */
     private static int readNumberOfPoints() {
-        throw new UnsupportedOperationException();
+
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        return a;
     }
 
     /**
@@ -19,7 +24,24 @@ public class Exercise2 {
      * @return The appropriate message
      */
     public static String messageToUser(int numberOfPoints) {
-        throw new UnsupportedOperationException();
+        switch(numberOfPoints)
+        {
+            case 49:
+                return ("CFR Cluj");
+            case 46:
+                return ("Universitatea Craiova");
+            case 43:
+                return ("FCSB");
+            case 42:
+                return ("FC Botosani");
+            case 40:
+                return ("Gaz Metan");
+            case 39:
+                return ("Astra Giurgiu");
+            default:
+                return ("No team from Liga 1 have "+numberOfPoints+" points");
+        }
+
     }
 
     public static void main(String[] args) {

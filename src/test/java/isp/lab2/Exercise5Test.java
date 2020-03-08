@@ -7,7 +7,7 @@ import static org.junit.Assert.assertTrue;
 
 public class Exercise5Test {
 
-    int[] someRandomNumbers = new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47};
+    int[] someRandomNumbers = new int[]{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 8, 10, 19, 30, 21};
 
     @Test
     public void testNumberGenerator() {
@@ -22,8 +22,8 @@ public class Exercise5Test {
     public void testGetSortedNumbers() {
         int[] sortedNumber = Exercise5.getSortedNumbers(someRandomNumbers);
         assertEquals("There should be 20 numbers in this array", 20, sortedNumber.length);
-        for (int i = 0; i <= sortedNumber.length - 1; i++) {
-            assertTrue("The array should be sorted", sortedNumber[i] <= sortedNumber[i + 1]);
+        for (int i = 0; i < sortedNumber.length-1; i++) {
+            assertTrue("The array should be sorted", sortedNumber[i] <= sortedNumber[i+1]);
         }
     }
 }

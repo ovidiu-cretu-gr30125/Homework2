@@ -9,7 +9,18 @@ public class Exercise4 {
      * @return true if number is prime and false otherwise
      */
     public static boolean isPrimeNumber(final int number) {
-        throw new UnsupportedOperationException();
+
+        if(number==0 || number==1)
+            return false;
+        if(number==2)
+            return true;
+        if(number%2==0)
+            return false;
+        for(int i=3;i<number;i++)
+            if(number%i==0)
+                return false;
+
+        return true;
     }
 
     /**
@@ -19,7 +30,14 @@ public class Exercise4 {
      * @return first odd number from the array
      */
     public static int firstOdd(int[] someNumbers) {
-        throw new UnsupportedOperationException();
+        int odd=0;
+        for(int i=0;i<someNumbers.length;i++){
+            if(someNumbers[i]%2!=0) {
+                odd=someNumbers[i];
+                break;
+            }
+        }
+        return odd;
     }
 
     /**
@@ -29,7 +47,14 @@ public class Exercise4 {
      * @return first even number from the array
      */
     public static int firstEven(int[] someNumbers) {
-        throw new UnsupportedOperationException();
+        int even=0;
+        for(int i=0;i<someNumbers.length;i++){
+            if(someNumbers[i]%2==0) {
+                even=someNumbers[i];
+                break;
+            }
+        }
+        return even;
     }
 
     /**
@@ -40,7 +65,14 @@ public class Exercise4 {
      */
     public static int firstPrime(int[] someNumbers) {
         // TODO: Use isPrimeNumber(final int number)
-        throw new UnsupportedOperationException();
+        int prim=0;
+        for (int i=0;i<someNumbers.length;i++){
+            if(isPrimeNumber(someNumbers[i])) {
+                prim = someNumbers[i];
+                break;
+            }
+        }
+        return prim;
     }
 
     /**
